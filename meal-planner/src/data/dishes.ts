@@ -1,0 +1,52 @@
+import { Dish, ClassAllergenProfile } from '../types';
+
+export const dishes: Dish[] = [
+  { id: 'm1', name: '红烧排骨', category: 'meat', energy: 380, protein: 22, allergens: ['soy', 'gluten'], tags: ['猪肉'] },
+  { id: 'm2', name: '宫保鸡丁', category: 'meat', energy: 320, protein: 20, allergens: ['peanut', 'soy'], tags: ['鸡肉'] },
+  { id: 'm3', name: '糖醋里脊', category: 'meat', energy: 350, protein: 18, allergens: ['egg', 'gluten'], tags: ['猪肉'] },
+  { id: 'm4', name: '清蒸鲈鱼', category: 'meat', energy: 220, protein: 24, allergens: ['seafood'], tags: ['鱼'] },
+  { id: 'm5', name: '可乐鸡翅', category: 'meat', energy: 340, protein: 19, allergens: ['soy'], tags: ['鸡肉'] },
+  { id: 'm6', name: '酱牛肉', category: 'meat', energy: 300, protein: 26, allergens: ['soy', 'gluten'], tags: ['牛肉'] },
+  { id: 'm7', name: '回锅肉', category: 'meat', energy: 400, protein: 17, allergens: ['soy'], tags: ['猪肉'] },
+  { id: 'm8', name: '孜然羊肉', category: 'meat', energy: 360, protein: 21, allergens: [], tags: ['羊肉'] },
+  { id: 'm9', name: '番茄炒蛋', category: 'meat', energy: 180, protein: 12, allergens: ['egg'], tags: ['蛋'] },
+  { id: 'm10', name: '鱼香肉丝', category: 'meat', energy: 280, protein: 16, allergens: ['soy', 'gluten'], tags: ['猪肉'] },
+  { id: 'm11', name: '红烧带鱼', category: 'meat', energy: 260, protein: 20, allergens: ['seafood', 'gluten'], tags: ['鱼'] },
+  { id: 'm12', name: '香菇炖鸡', category: 'meat', energy: 300, protein: 22, allergens: [], tags: ['鸡肉'] },
+  { id: 'm13', name: '辣子鸡', category: 'meat', energy: 330, protein: 20, allergens: ['gluten'], tags: ['鸡肉'] },
+  { id: 'm14', name: '水煮牛肉', category: 'meat', energy: 310, protein: 24, allergens: ['soy', 'gluten'], tags: ['牛肉'] },
+  { id: 'm15', name: '蒜蓉虾', category: 'meat', energy: 200, protein: 22, allergens: ['seafood'], tags: ['虾'] },
+
+  { id: 'v1', name: '清炒西兰花', category: 'veggie', energy: 80, protein: 5, allergens: [], tags: [] },
+  { id: 'v2', name: '麻婆豆腐', category: 'veggie', energy: 150, protein: 10, allergens: ['soy'], tags: [] },
+  { id: 'v3', name: '蒜蓉菜心', category: 'veggie', energy: 60, protein: 3, allergens: [], tags: [] },
+  { id: 'v4', name: '地三鲜', category: 'veggie', energy: 140, protein: 4, allergens: ['gluten'], tags: [] },
+  { id: 'v5', name: '酸辣土豆丝', category: 'veggie', energy: 110, protein: 3, allergens: [], tags: [] },
+  { id: 'v6', name: '干煸四季豆', category: 'veggie', energy: 120, protein: 4, allergens: [], tags: [] },
+  { id: 'v7', name: '红烧茄子', category: 'veggie', energy: 130, protein: 3, allergens: ['soy'], tags: [] },
+  { id: 'v8', name: '凉拌黄瓜', category: 'veggie', energy: 50, protein: 1, allergens: [], tags: [] },
+  { id: 'v9', name: '素炒冬瓜', category: 'veggie', energy: 55, protein: 1, allergens: [], tags: [] },
+  { id: 'v10', name: '椒盐玉米', category: 'veggie', energy: 160, protein: 4, allergens: [], tags: [] },
+  { id: 'v11', name: '蒜蓉菠菜', category: 'veggie', energy: 65, protein: 4, allergens: [], tags: [] },
+  { id: 'v12', name: '醋溜白菜', category: 'veggie', energy: 70, protein: 2, allergens: [], tags: [] },
+
+  { id: 's1', name: '紫菜蛋花汤', category: 'soup', energy: 60, protein: 4, allergens: ['egg', 'seafood'], tags: [] },
+  { id: 's2', name: '番茄蛋汤', category: 'soup', energy: 70, protein: 5, allergens: ['egg'], tags: [] },
+  { id: 's3', name: '排骨莲藕汤', category: 'soup', energy: 150, protein: 10, allergens: [], tags: ['猪肉'] },
+  { id: 's4', name: '冬瓜海米汤', category: 'soup', energy: 50, protein: 3, allergens: ['seafood'], tags: [] },
+  { id: 's5', name: '玉米排骨汤', category: 'soup', energy: 140, protein: 9, allergens: [], tags: ['猪肉'] },
+  { id: 's6', name: '银耳红枣汤', category: 'soup', energy: 90, protein: 1, allergens: [], tags: [] },
+  { id: 's7', name: '酸辣汤', category: 'soup', energy: 80, protein: 4, allergens: ['egg', 'soy', 'gluten'], tags: [] },
+  { id: 's8', name: '蘑菇鸡汤', category: 'soup', energy: 110, protein: 7, allergens: [], tags: ['鸡肉'] },
+  { id: 's9', name: '萝卜牛腩汤', category: 'soup', energy: 130, protein: 8, allergens: [], tags: ['牛肉'] },
+  { id: 's10', name: '鲫鱼豆腐汤', category: 'soup', energy: 100, protein: 9, allergens: ['soy', 'seafood'], tags: ['鱼'] },
+];
+
+export const classAllergenProfiles: ClassAllergenProfile[] = [
+  { className: '一年级1班', allergens: ['milk', 'egg'] },
+  { className: '一年级2班', allergens: ['peanut', 'nut'] },
+  { className: '二年级1班', allergens: ['seafood'] },
+  { className: '二年级2班', allergens: ['gluten'] },
+  { className: '三年级1班', allergens: ['soy', 'egg'] },
+  { className: '三年级2班', allergens: ['milk', 'nut', 'peanut'] },
+];
